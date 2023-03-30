@@ -5,6 +5,8 @@ https://stackoverflow.com/questions/48255651/calculations-using-a-list-with-oper
 https://codereview.stackexchange.com/questions/233814/reverse-polish-notation-rpn-calculator
 https://stackoverflow.com/questions/61097144/reading-operations-line-by-line-and-making-eval-for-each-line
 Mike James's The Python Programmer: Everything is Data, pages 239/240- Context Managers and With pattern
+https://www.w3schools.com/python/python_ref_list.asp
+Feedback from Darren 
 '''
 import operator
 
