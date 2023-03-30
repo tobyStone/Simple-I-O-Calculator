@@ -26,6 +26,10 @@
 #else: 
 #    print("Incorrect number of hours, please input a new figure...")
 
+'''
+https://stackoverflow.com/questions/4138202/using-isdigit-for-floats
+'''
+
 def addition(number1, number2):
     sum = number1 + number2
     return sum
@@ -151,7 +155,7 @@ def list_to_number(array_to_change):
 #    counter = counter + 1
 
 
-array = ["5","3","*","3","+","7","8","/","2"]
+array = ["3","-","7","*","2","3","/","8","+","0","-","3","2","1","8","9"]
 print(array)
 
 while len(array)> 1:
@@ -183,8 +187,8 @@ while len(array)> 1:
                     if j > len(array) - 1:
                         find_next_num = False
                         break
-                    elif array[j].isdigit():
-                        int2_catcher.append(int(array[j]))
+                    elif array[j].replace(".","").replace("-","").isdigit():
+                        int2_catcher.append(float(array[j]))
             
                         print(int2_catcher, "int2_catch")
                         array.insert(counter, 'a')
@@ -203,8 +207,8 @@ while len(array)> 1:
                     if h < 0:
                         find_last_num = False
                         break
-                    elif array[h].isdigit():
-                        int1_catcher.insert(0, int(array[h]))
+                    elif array[h].replace(".","").replace("-","").isdigit():
+                        int1_catcher.insert(0, float(array[h]))
                         array.insert(h, 'a')
                         array.pop(h + 1)
                         print(array, "array")
@@ -243,8 +247,8 @@ while len(array)> 1:
                     if j > len(array)-1:
                         find_next_num = False
                         break
-                    elif array[j].isdigit():
-                        int2_catcher.append(int(array[j]))
+                    elif array[j].replace(".","").replace("-","").isdigit():
+                        int2_catcher.append(float(array[j]))
                         array.insert(j, 'a')
                         array.pop(j + 1)
                         print(int2_catcher)
@@ -256,8 +260,8 @@ while len(array)> 1:
                     if h < 0:
                         find_last_num = False
                         break
-                    elif array[h].isdigit():
-                        int1_catcher.insert(0, int(array[h]))
+                    elif array[h].replace(".","").replace("-","").isdigit():
+                        int1_catcher.insert(0, float(array[h]))
                         array.insert(h, 'a')
                         array.pop(h + 1)
                         print(int1_catcher)
@@ -302,12 +306,13 @@ while len(array)> 1:
 
                 print(array, "array")
                 while find_next_num == True:
+#                    print(j,"j",array[j])
                     if j > len(array) - 1:
                         find_next_num = False
                         break
-                    elif array[j].isdigit():
-                        int2_catcher.append(int(array[j]))
-            
+                    elif array[j].replace(".","").replace("-","").isdigit():
+                        int2_catcher.append(float(array[j]))
+                        print(j,"j")  
                         print(int2_catcher, "int2_catch")
                         array.insert(counter, 'a')
                         array.pop(counter + 1)
@@ -322,11 +327,14 @@ while len(array)> 1:
                         break
 
                 while find_last_num == True:
+                    print(h,"h", array[h])
                     if h < 0:
                         find_last_num = False
+                        print("here")
                         break
-                    elif array[h].isdigit():
-                        int1_catcher.insert(0, int(array[h]))
+                    elif array[h].replace(".","").replace("-","").isdigit():
+                        print(h,"h2")
+                        int1_catcher.insert(0, float(array[h]))
                         array.insert(h, 'a')
                         array.pop(h + 1)
                         print(array, "array")
@@ -335,6 +343,7 @@ while len(array)> 1:
                         end_slice = h
                     else:
                         find_last_num = False
+                        print("there")
                         break
                 print(array, "array")
                 print(int1_catcher)
@@ -364,8 +373,8 @@ while len(array)> 1:
                     if j > len(array)-1:
                         find_next_num = False
                         break
-                    elif array[j].isdigit():
-                        int2_catcher.append(int(array[j]))
+                    elif array[j].replace(".","").replace("-","").isdigit():
+                        int2_catcher.append(float(array[j]))
                         array.insert(j, 'a')
                         array.pop(j + 1)
                         print(int2_catcher)
@@ -374,11 +383,11 @@ while len(array)> 1:
                         find_next_num = False
                         break
                 while find_last_num == True:
-                    if h < 0:
+                    if h < 0: 
                         find_last_num = False
                         break
-                    elif array[h].isdigit():
-                        int1_catcher.insert(0, int(array[h]))
+                    elif array[h].replace(".","").replace("-","").isdigit():
+                        int1_catcher.insert(0, float(array[h]))
                         array.insert(h, 'a')
                         array.pop(h + 1)
                         print(int1_catcher)
